@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-<form action="{{route('addPost')}}" method="POST">
+<form action="{{route('addPost')}}" method="POST" enctype="multipart/form-data">
     @csrf
   <div class="mb-3 mt-3">
     <label for="exampleInputEmail1" class="form-label">Model</label>
@@ -37,6 +37,10 @@
     <option value="{{$brand->id}}">{{$brand->brand}}</option>
   @endforeach
 </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="inputImage">Select Image:</label>
+    <input type="file" name="image" class="form-control">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

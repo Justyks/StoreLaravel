@@ -28,7 +28,8 @@ class AddingRequest extends FormRequest
             'information'=>'required',
             'size' => 'required',
             'memory'=>'required',
-            'weight'=>'required'
+            'weight'=>'required',
+            'image' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 }
