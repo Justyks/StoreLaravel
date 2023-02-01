@@ -16,7 +16,7 @@
   </thead>
   <tbody class="table-group-divider">
     @foreach($goods as $good)
-    <td>{{$good->name}}</td>
+    <td>{{$good->model}}</td>
     <td>
       <form action="{{ route('basket.minus', ['id' => $good->id]) }}"
           method="post" class="d-inline">
