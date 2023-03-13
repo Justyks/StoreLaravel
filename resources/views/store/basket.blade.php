@@ -2,9 +2,11 @@
 @section('title','Cart')
 
 @section('content')
-@if(isset($error))
+@if(empty($goods))
+<div class="container">
 <div class="alert alert-warning" role="alert">
-  {{$error}}
+  Your cart is empty
+</div>
 </div>
 @else
 <table class="table">

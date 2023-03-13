@@ -14,13 +14,13 @@ class BasketController extends Controller
         if(!empty($basket_id))
         {
            
-            $goods=Basket::findOrFail($basket_id)->goods;//need to fix
+            $goods=Basket::findOrFail($basket_id)->goods;
             return view('store.basket',[
                 'goods'=>$goods
             ]);
         }else
         {
-            abort(404);
+            return view('store.basket');
         }
     }
     public function add(Request $request,$id)

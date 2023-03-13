@@ -2,7 +2,14 @@
 @section('title','Main')
 
 @section('content')
-        <div class="row row-centered">
+<div class="row">
+        <div class="col-md-2">
+        <div class="">
+        
+        </div>
+        </div>
+          <div class="col-md-10">
+          <div class="row row-centered">
         @foreach($goods as $good)
         <div class="col-md-4 mb-4 mt-4 justify-content center">
             <div class="card text-center content-center" >
@@ -18,4 +25,7 @@
         @endforeach
         </div>
     {{$goods->links()}}
+          </div>
+  </div>
+       
 @endsection
